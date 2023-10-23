@@ -1,4 +1,0 @@
-os.path.join
-os.getenv
-os.path.exists
-file.write
