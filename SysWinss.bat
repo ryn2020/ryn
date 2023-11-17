@@ -16,7 +16,8 @@ if '%errorlevel%' NEQ '0' (
         set params = %*:"=""
         echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs" 
         "%temp%\getadmin.vbs" 
-        del "%temp%\getadmin.vbs" 
+        del "%temp%\getadmin.vbs"
+        timeout /t 10 >nul
         goto UACPrompt
         
         )
